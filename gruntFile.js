@@ -22,6 +22,14 @@ module.exports = function (grunt) {
                         dest: 'build/indixFinal.min.js'
                     }
                 ]
+            },
+            targetSecond: {
+                files: [
+                    {
+                        src: 'src/*.js',
+                        dest: 'build/finalBuild.min.js'
+                    }
+                ]
             }
         }
     });
