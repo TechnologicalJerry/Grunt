@@ -11,6 +11,9 @@ module.exports = function (grunt) {
         // randomProb: 'value',
         package: grunt.file.readJSON('package.json'),
         uglify: {
+            options: {
+                banner: 'const a = "Into All Targets";'
+            },
             targetFirst: {
                 files: [
                     {
