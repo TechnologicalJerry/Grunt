@@ -1,4 +1,4 @@
-module.export = function (grunt) {
+module.exports = function (grunt) {
     grunt.initConfig({
         // taskOne: {
         //     option: {},
@@ -15,12 +15,12 @@ module.export = function (grunt) {
                 files:[
                     {
                         src: 'src/index.js',
-                        dest: 'build/indix.main.js'
+                        dest: 'build/indix.min.js'
                     }
                 ]
             }
         }
     });
 
-    grunt.loadNPMTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 }
