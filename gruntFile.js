@@ -36,5 +36,7 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('compressJS', 'uglify');
+    grunt.registerTask('compressJavaScript', 'uglify');
+
+    grunt.registerTask('compressJavaScripSpecific', 'uglify:targetSecond');
 }
