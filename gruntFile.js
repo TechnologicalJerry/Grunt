@@ -12,10 +12,14 @@ module.exports = function (grunt) {
         package: grunt.file.readJSON('package.json'),
         uglify: {
             targetFirst: {
-                files:[
+                files: [
                     {
                         src: 'src/index.js',
                         dest: 'build/indix.min.js'
+                    },
+                    {
+                        src: ['src/indexFirst.js', 'src/indexSecond.js'],
+                        dest: 'build/indixFinal.min.js'
                     }
                 ]
             }
@@ -23,4 +27,6 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
+
+    grunt.registerTask('compressJS', 'uglify');
 }
